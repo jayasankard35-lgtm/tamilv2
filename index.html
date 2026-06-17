@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ் AI குரல் உதவியாளர் | Tamil AI Voice Assistant</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="தமிழ் மொழியில் பேசும் நவீன AI குரல் உதவியாளர். Chat with a modern AI voice assistant in Tamil.">
+  <meta name="keywords" content="Tamil AI, Voice Assistant, Speech recognition, Text to speech, தமிழ் AI, குரல் உதவியாளர்">
+  
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for clean vector icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <i class="fa-solid fa-microphone-lines logo-icon"></i>
+        <h1>முகிலன் <span class="accent-text">AI</span></h1>
+      </div>
+      <p class="tagline">தமிழ் AI குரல் உதவியாளர்</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Chat Interface Card -->
+      <section class="assistant-card" id="assistantCard">
+        
+        <!-- Controls & Settings Header -->
+        <div class="card-header">
+          <div class="voice-selector-container">
+            <label for="voiceSelect"><i class="fa-solid fa-volume-high"></i> குரல் (TTS Voice):</label>
+            <select id="voiceSelect" class="styled-select">
+              <option value="default">கணினி இயல்புநிலை (Default)</option>
+            </select>
+          </div>
+          <div class="settings-toggles">
+            <button id="clearBtn" class="action-btn" title="உரையாடலை அழி">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+            <button id="muteBtn" class="action-btn active" title="ஒலியை இயக்கு/முடக்கு">
+              <i class="fa-solid fa-volume-up" id="muteIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat History Window -->
+        <div class="chat-display" id="chatDisplay">
+          <div class="message system-message">
+            <div class="message-content">
+              வணக்கம்! நான் உங்கள் தமிழ் AI உதவியாளர். பேசுவதற்கு கீழே உள்ள மைக்ரோஃபோன் பொத்தானை அழுத்தவும். (Hello! I am your Tamil AI Assistant. Press the microphone button below to start talking.)
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Status Bar -->
+        <div class="status-bar" id="statusBar">
+          <span class="status-dot idle" id="statusDot"></span>
+          <span class="status-text" id="statusText">தயார் நிலையில் உள்ளது (Ready)</span>
+        </div>
+
+        <!-- Sound Waves Visualization -->
+        <div class="visualizer-container" id="visualizerContainer">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+
+        <!-- Action Panel -->
+        <div class="action-panel">
+          
+          <!-- Microphone Button Container -->
+          <div class="mic-button-wrapper">
+            <button class="mic-btn" id="micBtn" aria-label="Start listening">
+              <i class="fa-solid fa-microphone" id="micIcon"></i>
+            </button>
+            <span class="pulse-ring"></span>
+            <span class="pulse-ring delay-1"></span>
+          </div>
+          
+          <p class="instruction-text" id="instructionText">பேசுவதற்கு பொத்தானை அழுத்தவும்</p>
+          
+          <!-- Backend URL Config (For Easy Debugging & Testing) -->
+          <div class="backend-config">
+            <label for="backendUrlInput">Backend API URL:</label>
+            <input type="text" id="backendUrlInput" value="" placeholder="e.g. http://localhost:5000">
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>&copy; 2026 முகிலன் AI. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
