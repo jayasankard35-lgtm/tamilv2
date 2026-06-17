@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Determine Backend API URL
   // Detect if running locally or deployed, and store preference in localStorage
-  const defaultLocalBackend = 'http://localhost:5000';
+  const defaultLocalBackend = 'https://tamilv2-1.onrender.com';
   const savedBackendUrl = localStorage.getItem('tamil_assistant_backend_url');
   
   if (savedBackendUrl) {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isLocalhost = window.location.hostname === 'localhost' || 
                         window.location.hostname === '127.0.0.1' || 
                         window.location.hostname === '';
-    backendUrlInput.value = isLocalhost ? defaultLocalBackend : '';
+    backendUrlInput.value = defaultLocalBackend;
   }
 
   // Save backend URL when changed
