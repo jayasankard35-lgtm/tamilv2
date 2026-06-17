@@ -1,0 +1,23 @@
+{
+  "name": "tamil-voice-assistant-backend",
+  "version": "1.0.0",
+  "description": "Backend API server for Tamil Voice Assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "voice-assistant",
+    "tamil",
+    "gemini",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
